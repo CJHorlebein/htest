@@ -1,0 +1,33 @@
+{
+    "name": "back-in-my-day",
+    "version": "1.0.0",
+    "description": "Creating a snapshot of your life through the years that other users can view",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "heroku-postbuild": "npm install --production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LaurenReilly/Back-In-My-Day.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": "11.5.0",
+        "npm": "6.4.1"
+    },
+    "bugs": {
+        "url": "https://github.com/LaurenReilly/Back-In-My-Day/issues"
+    },
+    "homepage": "https://github.com/LaurenReilly/Back-In-My-Day#readme",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "bootstrap": "^4.2.1",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "multer": "^1.4.1",
+        "nodemon": "^1.18.9",
+        "sequelize": "^4.42.0"
+    }
+}
