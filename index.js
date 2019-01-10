@@ -2,7 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const app = express();
 const path = require("path");
-const bout = require("./app/about");
+const about = require("./app/about");
 const login = require("./app/login");
 
 //to parse form data
@@ -10,7 +10,8 @@ var multer = require("multer");
 var upload = multer();
 
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3000;
+const host = "0.0.0.0";
+const port = process.env.PORT || 3000;
 
 //setting view engine and where to find views
 app.set("view engine", "ejs");
@@ -81,6 +82,6 @@ app.post("/questions", function(req, res, next) {
     res.render("questionForm", questions[ageRange]);
 });
 
-app.listen(PORT, () => {
-    console.log(`Starting app on ${PORT}`);
+app.listen(port, host, () => {
+    console.log(`Starting app on ${port}`);
 });
