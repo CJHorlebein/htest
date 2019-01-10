@@ -17,9 +17,6 @@ const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.set("views", "app/views");
 
-app.use("/", about);
-app.use("/", login);
-
 // for parsing application/json
 app.use(bodyParser.json());
 
@@ -51,21 +48,6 @@ let questions = {
         question1: "Who was your celebrity crush?",
         question2: "What song got you pumped at the school dance?",
         question3: "What did you think you would do when you grew up?"
-    },
-    teenager: {
-        question1: "What pissed you off more than anything else?",
-        question2: "Biggest surprise about hitting puberty?",
-        question3: "One of the worst things you did?"
-    },
-    youngAdult: {
-        question1: "What did you eat on a regular basis?",
-        question2: "What was the state of your bedroom?",
-        question3: "What did your dating life look like?"
-    },
-    adult: {
-        question1: "Is this where you saw yourself?",
-        question2: "Do you wear socks with holes in them?",
-        question3: "Where will you be in ten years?"
     }
 };
 
