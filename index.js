@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // for parsing multipart/form-data
 app.use(upload.array());
-app.use(express.static("app"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res, next) {
     // res.send("I'm the home page");
