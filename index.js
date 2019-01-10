@@ -2,7 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const app = express();
 const path = require("path");
-const about = require("./app/about");
+const bout = require("./app/about");
 const login = require("./app/login");
 
 //to parse form data
