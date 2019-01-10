@@ -7,7 +7,6 @@ var multer = require("multer");
 var upload = multer();
 
 const bodyParser = require("body-parser");
-const host = "0.0.0.0";
 const port = process.env.PORT || 3000;
 
 //setting view engine and where to find views
@@ -27,6 +26,6 @@ app.get("/", function(req, res, next) {
     res.render("index");
 });
 
-app.listen(port, host, () => {
+app.listen(port, () => {
     console.log(`Starting app on ${port}`);
 });
