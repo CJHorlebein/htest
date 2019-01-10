@@ -1,30 +1,22 @@
-const express = require("express");
-const ejs = require("ejs");
-const app = express();
-const path = require("path");
-//to parse form data
-var multer = require("multer");
-var upload = multer();
+var express = require("express");
+var app = express();
 
-const bodyParser = require("body-parser");
-const port = process.env.PORT || 3000;
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
 
-//setting view engine and where to find views
+// set the view engine to ejs
 app.set("view engine", "ejs");
 
-// for parsing application/json
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// for parsing multipart/form-data
-app.use(upload.array());
+// make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function(req, res, next) {
-    // res.send("I'm the home page");
+// set the home page route
+app.get("/", function(req, res) {
+    // ejs render automatically looks in the views folder
     res.render("index");
 });
 
-app.listen(port, () => {
-    console.log(`Starting app on ${port}`);
+app.listen(port, function() {
+    console.log("Our app is running on http://localhost:" + port);
 });
