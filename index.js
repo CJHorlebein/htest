@@ -3,6 +3,8 @@ const ejs = require("ejs");
 const app = express();
 const path = require("path");
 //to parse form data
+var multer = require("multer");
+var upload = multer();
 
 const bodyParser = require("body-parser");
 const host = "0.0.0.0";
