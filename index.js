@@ -11,7 +11,6 @@ const port = process.env.PORT || 3000;
 
 //setting view engine and where to find views
 app.set("view engine", "ejs");
-app.set("views", "app/views");
 
 // for parsing application/json
 app.use(bodyParser.json());
